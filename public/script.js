@@ -3,8 +3,7 @@ document.getElementById('userForm').addEventListener('submit', async function(ev
 
     const formData = {
         name: document.getElementById('name').value,
-        age: document.getElementById('age').value,
-        city: document.getElementById('city').value
+        email: document.getElementById('email').value
     };
 
     try {

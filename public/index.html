@@ -1,29 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Data Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h1>User Information</h1>
-        <form id="userForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
 
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
-
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" required>
-
-            <button type="submit">Submit</button>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full relative">
+        <h1 class="text-2xl font-semibold mb-6 text-gray-700">User Information</h1>
+        <form id="userForm" class="space-y-6">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-600">Name:</label>
+                <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-600">Email:</label>
+                <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <button type="submit" class="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Submit</button>
         </form>
 
-        <div id="response"></div>
+        <div id="response" class="mt-4 text-indigo-600"></div>
+
+        <!-- Loader Div -->
+        <div id="loader" class="hidden absolute inset-0 flex items-center justify-center bg-white bg-opacity-75">
+            <img src="https://via.placeholder.com/50" alt="Loading..." class="animate-spin">
+        </div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            // Show the loader
+            document.getElementById('loader').classList.remove('hidden');
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value
+            };
+
+            try {
+                const response = await fetch('/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.text();
+
+                // Hide the loader
+                document.getElementById('loader').classList.add('hidden');
+
+                // Display the result in the response div
+                document.getElementById('response').innerHTML = result;
+
+                // Check if the response indicates that the user exists
+                if (result.includes('User already exists with ID:')) {
+                    // Redirect after 3 seconds if the user already exists
+                    setTimeout(function () {
+                        window.location.href = '/existing'; // Redirect to the specified page
+                    }, 1000);
+                }
+
+            } catch (error) {
+                // Hide the loader
+                document.getElementById('loader').classList.add('hidden');
+                
+                document.getElementById('response').textContent = 'Error: ' + error.message;
+            }
+        });
+    </script>
 </body>
+
 </html>
