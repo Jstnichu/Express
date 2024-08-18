@@ -193,7 +193,23 @@ img {
 }
 .home__title-color {
   color: var(--first-color);
+
 }
+@keyframes switch-titles {
+  0% { content: 'Web Designer'; }
+  20% { content: 'Data Analyst'; }
+  30%{ content: 'Backend Developer'; }
+  40% { content: 'App Developer'; }
+  60% { content: 'IoT (Embedded)'; }
+  80% { content: 'ML&AI'; }
+  100% { content: 'Web Designer'; }
+}
+.animate-titles::after {
+  content: 'Web Designer';
+  animation: switch-titles 10s infinite;
+}
+
+
 .home__social {
   display: flex;
   flex-direction: column;
@@ -290,6 +306,25 @@ img {
   border-radius: 0.5rem;
   z-index: var(--z-back);
 }
+.skills__powerbi {
+  width: 70%;
+
+}
+.skills__flutter{
+  width: 80%;
+}
+.skills__iot {
+  width: 60%;
+  
+}
+.skills__ml {
+  width: 50%;
+}
+
+.skills__backend {
+  width: 75%;
+
+}
 .skills__html {
   width: 95%;
 }
@@ -340,7 +375,173 @@ img {
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
+
 }
+.work__img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.work__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.work__img .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.work__img:hover .overlay {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+#iframeContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#iframe {
+  width: 80%;
+  height: 80%;
+  border: 1px solid #fff;
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* ===== co-activites =====*/
+.contact__button:hover {
+  color: var(--first-color);
+}
+.work__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.work__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.work__description {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  transition: top 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.work__item:hover .work__description {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.work__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Modal container */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 1000; /* On top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px; /* Adjust based on design */
+  position: relative;
+}
+
+.scrollable-text {
+  max-height: 200px; /* Set the height based on your requirement */
+  overflow-y: auto;  /* Enable vertical scroll */
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust background color if needed */
+  color: white; /* Ensure text is readable */
+}
+
+/* Optional: Add styling for the scrollbar */
+.scrollable-text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-text::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+.scrollable-text::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 /* ===== FOOTER =====*/
 .footer {

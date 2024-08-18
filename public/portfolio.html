@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
         <link rel="stylesheet" href="styles2.css">
 
         <!-- =====BOX ICONS===== -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>Nichith's Portfolio</title>
@@ -16,7 +18,7 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Marlon</a>
+                    <a href="#" class="nav__logo">Sure Nichith</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -25,6 +27,7 @@
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#Co-curricular activities" class="nav__link">Co-circular activities</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -39,15 +42,17 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Marlon</span><br> Web Designer</h1>
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Sure Nichith</span><br><span class="home__title-color animate-titles"></span></h1>
 
-                    <a href="#" class="button">Contact</a>
+                    <a href="#contact" class="button">Contact</a>
                 </div>
 
                 <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.linkedin.com/in/sure-nichith-b492bb24a/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://github.com/Jstnichu" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    
+
                 </div>
 
                 <div class="home__img">
@@ -57,7 +62,7 @@
                         </mask>
                         <g mask="url(#mask0)">
                             <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="img/perfil.png"/>
+                            <image class="home__blob-img" x="50" y="60" href="\img\img.png"/>
                         </g>
                     </svg>
                 </div>
@@ -69,12 +74,23 @@
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <img src="img/about.jpg" alt="">
+                        <img src="img/img2.jpg" alt="no image">
                     </div>
                     
                     <div>
-                        <h2 class="about__subtitle">I'am Marlon</h2>
-                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
+                        <h2 class="about__subtitle">I'am Sure Nichith</h2>
+                        <p class="about__text">Ambitious and detail-oriented professional seeking a full-time position that leverages
+                            my technical expertise, leadership, and problem-solving abilities. With a strong
+                            foundation in software development, IoT systems, and data science, I excel at creating
+                            innovative solutions and managing complex projects. My proficiency in tools like
+                            Flutter, Flask, and Power BI, combined with my ability to design user-friendly
+                            interfaces in Figma, enables me to deliver impactful results.
+                            I bring excellent time management and organizational skills, ensuring that multiple
+                            priorities are met with efficiency and a positive attitude. A natural leader with a passion
+                            for continuous learning, I am eager to take on added responsibilities to drive team
+                            success. My diverse hobbies, such as learning new technologies, traveling, and enjoying
+                            music, fuel my creativity and adaptability, making me a well-rounded candidate ready
+                            to contribute to your organization’s goals.</p>           
                     </div>                                   
                 </div>
             </section>
@@ -113,6 +129,50 @@
                         </div>
                         <div class="skills__data">
                             <div class="skills__names">
+                                <i class="fab fa-flutter skills__icon"></i>
+                                <span class="skills__name">Flutter</span>
+                            </div>
+                            <div class="skills__bar skills__flutter"></div>
+                            <div>
+                                <span class="skills__percentage">50%</span>
+                            </div>
+                        </div>
+                        
+                     
+                        <!-- Power BI Tools Skill -->
+                         <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-bar-chart-alt-2 skills__icon'></i>
+                                <span class="skills__name">Power BI Tools</span>
+                            </div>
+                            <div class="skills__bar skills__powerbi"></div>
+                            <div>
+                                <span class="skills__percentage">70%</span>
+                            </div>
+                        </div>
+                         <!-- IoT Skill -->
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bx-chip skills__icon'></i>
+                    <span class="skills__name">IoT (Embedded Systems)</span>
+                </div>
+                <div class="skills__bar skills__iot"></div>
+                <div>
+                    <span class="skills__percentage">60%</span>
+                </div>
+            </div>
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxl-nodejs skills__icon'></i>
+                    <span class="skills__name">Backend Development</span>
+                </div>
+                <div class="skills__bar skills__backend"></div>
+                <div>
+                    <span class="skills__percentage">75%</span>
+                </div>
+            </div>
+            <div class="skills__data">
+                            <div class="skills__names">
                                 <i class='bx bxl-javascript skills__icon' ></i>
                                 <span class="skills__name">JAVASCRIPT</span>
                             </div>
@@ -148,11 +208,13 @@
                 <h2 class="section-title">Work</h2>
 
                 <div class="work__container bd-grid">
-                    <a href="" class="work__img">
+                    <a href="#" class="work__img" data-src="https://www.example.com/1">
                         <img src="img/work1.jpg" alt="">
+                        <div class="overlay">Description for Work 1</div>
                     </a>
-                    <a href="" class="work__img">
+                    <a href="#" class="work__img" data-src="https://www.example.com/2">
                         <img src="img/work2.jpg" alt="">
+                        <div class="overlay">Description for Work 2</div>
                     </a>
                     <a href="" class="work__img">
                         <img src="img/work3.jpg" alt="">
@@ -168,6 +230,100 @@
                     </a>
                 </div>
             </section>
+            <!--===== Co-curricular Activities =====-->
+<section class="work section" id="Co-curricular activities">
+    <h2 class="section-title">Co-curricular Activities</h2>
+
+    <div class="work__container bd-grid">
+        <div class="work__item">
+            <a href="details.html" class="work__img">
+                <img src="img\technoloy club.jpeg" alt="">
+            </a>
+            <div class="work__description">
+                <h3>Technology Club</h3>
+                <p>Active member of the Technology Club, involved in organizing and participating in various tech events and workshops.</p>
+            </div>
+        </div>
+        <div class="work__item">
+            <a href="details.html" class="work__img">
+                <img src="img/1697442160885.jpeg" alt="">
+            </a>
+            <div class="work__description">
+                <div class = scrollable-text>
+                <h3> National-Level Hackathon hosted by the Oriental Institute of Science & Technology, Bhopal.</h3>
+                <p>#Best_Implementation: Huge congratulations to SURE NICHITH and Team Bandla Kavya , Yuktha Mukhi Nadella , Charan Teja Kondamuri , Srikar Tadakamalla for their exceptional implementation of cutting-edge ideas. They've set a high standard for innovation. A special shoutout to their mentor, Dr. JASWANTH NIDAMANURI, for his guidance and support.</p>
+            </div>
+            </div>
+        </div>
+        <div class="work__item">
+            <a href="#" class="work__img">
+                <img src="img/event2.jpeg" alt="">
+            </a>
+            <div class="work__description">
+                <div class="scrollable-text">
+                <h3>What an Exhilarating Journey at the MARK XXIV Hackathon!</h3>
+                <p>In a world that's constantly evolving, innovation is the key to success, and that's exactly what MARK XXIV is all about. We've gathered some of the brightest minds to brainstorm, ideate, and create groundbreaking solutions to the challenges of today and tomorrow.
+
+                    As an organizer, it's been an incredible journey to put together this event that fosters creativity and collaboration. From the initial concept to the final preparations, the dedication and passion of our team have been truly inspiring.
+                    </p>
+            </div>
+            </div>
+        </div>
+        <div class="work__item">
+            <a href="#" class="work__img">
+                <img src="img/event3.jpeg" alt="">
+            </a>
+            <div class="work__description">
+                <div class="scrollable-text">
+                <h3>national Conference conducted by School of Technology, Woxsen University during 23-25th June 2023 and sponsored by DST-SERB and APTSMS: A Grand Finale! </h3>
+                <p>As we bid farewell to an extraordinary three-day international conference, I want to express my deepest gratitude to all the guests( Dr Jyotirmoy Rana, Prof Natesan Srinivasan, Prof. Sachinkumar B Bhalekar, Prof. Y N Reddy, Prof. J.V. Ramana Murthy) who made Day 3 a grand finale filled with remarkable insights and memorable moments!
+                    A special shout-out to our dedicated student volunteers ( Kuragayala Kenny Joel, Bharath Reddy, Kalakoti Varun Teja, Aditi Baggu, Bandla Kavya, SURE NICHITH, Suchitra Sekhar, Yuktha Mukhi Nadella, Jeereddy Mani Chenna Kesava Reddy )who worked tirelessly until the very end. Your commitment, resilience, and professionalism throughout the conference have been remarkable. From managing logistics to ensuring the smooth flow of events, your contributions have been invaluable. 
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="work__item">
+            <a href="#" class="work__img">
+                <img src="img/event4.jpeg" alt="">
+            </a>
+            <div class="work__description">
+                <div class="scrollable-text">
+                <h3>Empowering Young Minds for a Healthier Future</h3>
+                <p>ERS activity at the School of Technology, where we had the privilege of hosting 3rd-year DSAI, B.Tech students from School of Technology Woxsen University, Hyderabad. The session focused on the crucial relationship between nutrition, mental health, and combating obesity..</p>
+            </div>
+            </div>
+        </div>
+        <div class="work__item">
+            <a href="#" class="work__img">
+                <img src="img/event5.jpeg" alt="">
+            </a>
+            <div class="work__description">
+                <div class="scrollable-text">
+                <h3>Empowering Nearby Villages and Schools through Cyber Suraksha Event
+                </h3>
+                <p>The resource persons from CSI Computer Society Of India, Ms. Rama S. Patnaik and Wing commander Srinivasu G conducted the sessions focusing on Common Cyber Threats, Protecting Personal Information, 
+                    Password Management, Identifying Cyber Scams, 
+                    Social Media Security, and reporting Cyber Incidents.
+                    .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Technology Club</h3>
+            <p>Active member of the Technology Club, involved in organizing and participating in various tech events and workshops.</p>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>MARK 24 Hackathon</h3>
+            <p>Participated in the MARK 24 Hackathon, contributing to innovative projects and collaborative problem-solving.</p>
+        </div>
+    </div>
+</section>
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
@@ -178,7 +334,7 @@
                         <input type="text" placeholder="Name" class="contact__input">
                         <input type="mail" placeholder="Email" class="contact__input">
                         <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
+                        <input type="button" value="Submit" class="contact__button button">
                     </form>
                 </div>
             </section>
@@ -186,13 +342,13 @@
 
         <!--===== FOOTER =====-->
         <footer class="footer">
-            <p class="footer__title">Marlon</p>
+            <p class="footer__title">Sure Nichith</p>
             <div class="footer__social">
                 <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
                 <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
                 <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+            <p class="footer__copy">&#169; sure-nichith-b492bb24a. All rigths reserved</p>
         </footer>
 
 
