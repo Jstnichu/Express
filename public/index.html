@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,6 +19,7 @@
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-600">Email:</label>
                 <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <span id="emailError" class="text-red-500 text-sm hidden">Please enter a valid email address.</span>
             </div>
             <button type="submit" class="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Submit</button>
         </form>
@@ -26,21 +27,41 @@
         <div id="response" class="mt-4 text-indigo-600"></div>
 
         <!-- Loader Div -->
-        <div id="loader" class="hidden absolute inset-0 flex items-center justify-center bg-white bg-opacity-75">
-            <img src="https://via.placeholder.com/50" alt="Loading..." class="animate-spin">
+        <div id="loader" class="container hidden">
+            <div class="loader">
+                <div class="crystal"></div>
+                <div class="crystal"></div>
+                <div class="crystal"></div>
+                <div class="crystal"></div>
+                <div class="crystal"></div>
+                <div class="crystal"></div>
+            </div>
         </div>
+
     </div>
 
     <script>
         document.getElementById('userForm').addEventListener('submit', async function (event) {
             event.preventDefault(); // Prevent form from submitting the traditional way
 
+            // Clear any previous error message
+            document.getElementById('emailError').classList.add('hidden');
+
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Validate email format
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').classList.remove('hidden');
+                return;
+            }
+
             // Show the loader
             document.getElementById('loader').classList.remove('hidden');
 
             const formData = {
                 name: document.getElementById('name').value,
-                email: document.getElementById('email').value
+                email: email
             };
 
             try {
@@ -65,7 +86,7 @@
                     // Redirect after 3 seconds if the user already exists
                     setTimeout(function () {
                         window.location.href = '/existing'; // Redirect to the specified page
-                    }, 1000);
+                    }, 3000);
                 }
 
             } catch (error) {
