@@ -1,103 +1,81 @@
-/*===== MENU SHOW =====*/ 
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-          nav = document.getElementById(navId)
+/* ===== MOBILE NAV ===== */
+const navToggle = document.getElementById('nav-toggle');
+const navClose  = document.getElementById('nav-close');
+const navMenu   = document.getElementById('nav-menu');
 
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-}
-showMenu('nav-toggle', 'nav-menu')
+if (navToggle) navToggle.addEventListener('click', () => navMenu.classList.add('show'));
+if (navClose)  navClose.addEventListener('click',  () => navMenu.classList.remove('show'));
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+document.querySelectorAll('.nav__link').forEach(link =>
+    link.addEventListener('click', () => navMenu.classList.remove('show'))
+);
 
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+/* ===== ACTIVE NAV LINK ON SCROLL ===== */
+const sections = document.querySelectorAll('section[id]');
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+function updateActiveLink() {
+    const scrollY = window.scrollY;
+    sections.forEach(section => {
+        const top    = section.offsetTop - 100;
+        const height = section.offsetHeight;
+        const id     = section.getAttribute('id');
+        const link   = document.querySelector(`.nav__link[href="#${id}"]`);
+        if (!link) return;
 
-const scrollActive = () =>{
-    const scrollDown = window.scrollY
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        
-        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-            sectionsClass.classList.add('active-link')
-        }else{
-            sectionsClass.classList.remove('active-link')
-        }                                                    
-    })
-}
-window.addEventListener('scroll', scrollActive)
-
-/*===== WORK MODAL HANDLING =====*/
-const images = document.querySelectorAll('.work__img');
-const modals = document.querySelectorAll('.modal');
-const closeButtons = document.querySelectorAll('.close');
-
-// Add click event listener to each image to open corresponding modal
-images.forEach(image => {
-    image.addEventListener('click', function(event) {
-        event.preventDefault();
-        const modalId = this.getAttribute('data-target');
-        const modal = document.querySelector(modalId);
-        if (modal) {
-            modal.style.display = 'block';
+        if (scrollY >= top && scrollY < top + height) {
+            link.classList.add('active-link');
+        } else {
+            link.classList.remove('active-link');
         }
     });
-});
-document.querySelectorAll('.work__img').forEach(img => {
-    img.addEventListener('click', function(event) {
-        event.preventDefault();
-        const iframeSrc = this.getAttribute('data-src');
-        document.getElementById('iframe').src = iframeSrc;
-        document.getElementById('iframeContainer').classList.remove('hidden');
+}
+
+window.addEventListener('scroll', updateActiveLink, { passive: true });
+
+/* ===== ROLE TEXT CYCLING ===== */
+const roles = ['DevOps Engineer', 'AIOps Engineer', 'DevSecOps Engineer', 'Cloud Architect', 'LLMOps Practitioner', 'Python Automation Expert'];
+let roleIndex = 0;
+const roleEl  = document.getElementById('role-text');
+
+if (roleEl) {
+    setInterval(() => {
+        roleEl.classList.add('fade-out');
+        setTimeout(() => {
+            roleIndex = (roleIndex + 1) % roles.length;
+            roleEl.textContent = roles[roleIndex];
+            roleEl.classList.remove('fade-out');
+        }, 300);
+    }, 2400);
+}
+
+/* ===== CONTACT FORM ===== */
+const contactForm    = document.getElementById('contact-form');
+const formSuccessMsg = document.getElementById('form-success');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', e => {
+        e.preventDefault();
+        if (formSuccessMsg) formSuccessMsg.classList.add('visible');
+        contactForm.reset();
+        setTimeout(() => formSuccessMsg && formSuccessMsg.classList.remove('visible'), 5000);
     });
-});
+}
 
-document.getElementById('closeButton').addEventListener('click', function() {
-    document.getElementById('iframeContainer').classList.add('hidden');
-    document.getElementById('iframe').src = ''; // Clear iframe src to stop loading
-});
-// Add click event listener to each close button to close modal
-closeButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const modal = this.closest('.modal');
-        modal.style.display = 'none';
-    });
-});
+/* ===== SCROLL REVEAL ===== */
+if (typeof ScrollReveal !== 'undefined') {
+    const sr = ScrollReveal({ origin: 'bottom', distance: '40px', duration: 800, delay: 100, reset: false });
 
-// Close the modal if the user clicks anywhere outside of it
-window.addEventListener('click', function(event) {
-    modals.forEach(modal => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-
-/*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2000,
-    delay: 200,
-    // reset: true  // Uncomment to make animations repeat on scroll
-});
-
-sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', { delay: 400 }); 
-sr.reveal('.home__social-icon', { interval: 200 }); 
-sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 }); 
+    sr.reveal('.home__data',          { origin: 'left' });
+    sr.reveal('.home__visual',        { origin: 'right', delay: 200 });
+    sr.reveal('.about__img-wrap',     { origin: 'left' });
+    sr.reveal('.about__data',         { origin: 'right', delay: 150 });
+    sr.reveal('.skill__item',         { interval: 80 });
+    sr.reveal('.project__card',        { interval: 100 });
+    sr.reveal('.exp__item',           { interval: 120 });
+    sr.reveal('.patent__card',        { interval: 100 });
+    sr.reveal('.award__card',         { interval: 80 });
+    sr.reveal('.cert__card',          { interval: 80 });
+    sr.reveal('.activity__card',      { interval: 100 });
+    sr.reveal('.contact__info',       { origin: 'left' });
+    sr.reveal('.contact__form',       { origin: 'right', delay: 150 });
+}

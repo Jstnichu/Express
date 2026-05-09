@@ -1,102 +1,74 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Data Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Sure Nichith — DevOps · AIOps · DevSecOps Engineer</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full relative">
-        <h1 class="text-2xl font-semibold mb-6 text-gray-700">User Information</h1>
-        <form id="userForm" class="space-y-6">
-            <div>
-                <label for="name" class="block text-sm font-medium text-gray-600">Name:</label>
-                <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-            </div>
-            <div>
-                <label for="email" class="block text-sm font-medium text-gray-600">Email:</label>
-                <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                <span id="emailError" class="text-red-500 text-sm hidden">Please enter a valid email address.</span>
-            </div>
-            <button type="submit" class="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Submit</button>
-        </form>
-
-        <div id="response" class="mt-4 text-indigo-600"></div>
-
-        <!-- Loader Div -->
-        <div id="loader" class="container hidden">
-            <div class="loader">
-                <div class="crystal"></div>
-                <div class="crystal"></div>
-                <div class="crystal"></div>
-                <div class="crystal"></div>
-                <div class="crystal"></div>
-                <div class="crystal"></div>
-            </div>
+<body>
+    <div class="splash">
+        <div class="splash__bg">
+            <div class="blob blob--1"></div>
+            <div class="blob blob--2"></div>
+            <div class="blob blob--3"></div>
         </div>
 
+        <div class="splash__content">
+            <div class="splash__img-outer">
+                <div class="splash__img-wrap">
+                    <img src="img/img.png" alt="Sure Nichith" class="splash__photo">
+                </div>
+            </div>
+
+            <div class="splash__text">
+                <p class="splash__greeting">Hello, I'm</p>
+                <h1 class="splash__name">Sure Nichith</h1>
+                <p class="splash__role">
+                    <span class="splash__role-prefix">A </span><span id="role-text">DevOps Engineer</span>
+                </p>
+                <p class="splash__bio">
+                    Production-grade cloud infrastructure across Azure, GCP &amp; on-prem.
+                    3 published patents &middot; 10+ research projects in AI automation, cloud security, and infrastructure optimization.
+                </p>
+
+                <a href="portfolio.html" class="splash__cta">
+                    <span>Explore Portfolio</span>
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+                <div class="splash__social">
+                    <a href="https://www.linkedin.com/in/sure-nichith-b492bb24a/" target="_blank" rel="noopener" class="splash__social-link" title="LinkedIn">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Jstnichu" target="_blank" rel="noopener" class="splash__social-link" title="GitHub">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="#" class="splash__social-link" title="Instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        document.getElementById('userForm').addEventListener('submit', async function (event) {
-            event.preventDefault(); // Prevent form from submitting the traditional way
+        const roles = ['DevOps Engineer', 'AIOps Engineer', 'DevSecOps Engineer', 'Cloud Architect', 'Infrastructure Automation Specialist','Python Developer'];
+        let index = 0;
+        const el = document.getElementById('role-text');
 
-            // Clear any previous error message
-            document.getElementById('emailError').classList.add('hidden');
-
-            const email = document.getElementById('email').value;
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            // Validate email format
-            if (!emailRegex.test(email)) {
-                document.getElementById('emailError').classList.remove('hidden');
-                return;
-            }
-
-            // Show the loader
-            document.getElementById('loader').classList.remove('hidden');
-
-            const formData = {
-                name: document.getElementById('name').value,
-                email: email
-            };
-
-            try {
-                const response = await fetch('/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                const result = await response.text();
-
-                // Hide the loader
-                document.getElementById('loader').classList.add('hidden');
-
-                // Display the result in the response div
-                document.getElementById('response').innerHTML = result;
-
-                // Check if the response indicates that the user exists
-                if (result.includes('User already exists with ID:')) {
-                    // Redirect after 3 seconds if the user already exists
-                    setTimeout(function () {
-                        window.location.href = '/existing'; // Redirect to the specified page
-                    }, 3000);
-                }
-
-            } catch (error) {
-                // Hide the loader
-                document.getElementById('loader').classList.add('hidden');
-                
-                document.getElementById('response').textContent = 'Error: ' + error.message;
-            }
-        });
+        function cycleRole() {
+            el.classList.add('fade-out');
+            setTimeout(() => {
+                index = (index + 1) % roles.length;
+                el.textContent = roles[index];
+                el.classList.remove('fade-out');
+            }, 300);
+        }
+        setInterval(cycleRole, 2200);
     </script>
 </body>
-
 </html>

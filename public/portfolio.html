@@ -1,361 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Sure Nichith — DevOps · AIOps · DevSecOps Engineer</title>
+</head>
+<body>
 
-        <link rel="stylesheet" href="styles2.css">
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">
+                <span class="nav__logo-dot"></span>Sure Nichith
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#home"        class="nav__link active-link">Home</a></li>
+                    <li><a href="#about"       class="nav__link">About</a></li>
+                    <li><a href="#experience"  class="nav__link">Experience</a></li>
+                    <li><a href="#projects"    class="nav__link">Projects</a></li>
+                    <li><a href="#recognition" class="nav__link">Recognition</a></li>
+                    <li><a href="#contact"     class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close"><i class="bx bx-x"></i></div>
+            </div>
+            <div class="nav__actions">
+                <a href="mailto:surenichith1234567@gmail.com" class="nav__cta">Hire Me</a>
+                <div class="nav__toggle" id="nav-toggle"><i class="bx bx-menu"></i></div>
+            </div>
+        </nav>
+    </header>
 
-        <!-- =====BOX ICONS===== -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <main>
 
-        <title>Nichith's Portfolio</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Sure Nichith</a>
-                </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#Co-curricular activities" class="nav__link">Co-circular activities</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
+        <!-- ===== HOME ===== -->
+        <section class="home section" id="home">
+            <div class="home__mesh" aria-hidden="true">
+                <div class="home__blob home__blob--1"></div>
+                <div class="home__blob home__blob--2"></div>
+                <div class="home__blob home__blob--3"></div>
+            </div>
+            <div class="home__container container">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Sure Nichith</span><br><span class="home__title-color animate-titles"></span></h1>
-
-                    <a href="#contact" class="button">Contact</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/sure-nichith-b492bb24a/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://github.com/Jstnichu" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                    
-
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="\img\img.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="img/img2.jpg" alt="no image">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Sure Nichith</h2>
-                        <p class="about__text">Ambitious and detail-oriented professional seeking a full-time position that leverages
-                            my technical expertise, leadership, and problem-solving abilities. With a strong
-                            foundation in software development, IoT systems, and data science, I excel at creating
-                            innovative solutions and managing complex projects. My proficiency in tools like
-                            Flutter, Flask, and Power BI, combined with my ability to design user-friendly
-                            interfaces in Figma, enables me to deliver impactful results.
-                            I bring excellent time management and organizational skills, ensuring that multiple
-                            priorities are met with efficiency and a positive attitude. A natural leader with a passion
-                            for continuous learning, I am eager to take on added responsibilities to drive team
-                            success. My diverse hobbies, such as learning new technologies, traveling, and enjoying
-                            music, fuel my creativity and adaptability, making me a well-rounded candidate ready
-                            to contribute to your organization’s goals.</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class="fab fa-flutter skills__icon"></i>
-                                <span class="skills__name">Flutter</span>
-                            </div>
-                            <div class="skills__bar skills__flutter"></div>
-                            <div>
-                                <span class="skills__percentage">50%</span>
-                            </div>
-                        </div>
-                        
-                     
-                        <!-- Power BI Tools Skill -->
-                         <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-bar-chart-alt-2 skills__icon'></i>
-                                <span class="skills__name">Power BI Tools</span>
-                            </div>
-                            <div class="skills__bar skills__powerbi"></div>
-                            <div>
-                                <span class="skills__percentage">70%</span>
-                            </div>
-                        </div>
-                         <!-- IoT Skill -->
-            <div class="skills__data">
-                <div class="skills__names">
-                    <i class='bx bx-chip skills__icon'></i>
-                    <span class="skills__name">IoT (Embedded Systems)</span>
-                </div>
-                <div class="skills__bar skills__iot"></div>
-                <div>
-                    <span class="skills__percentage">60%</span>
-                </div>
-            </div>
-            <div class="skills__data">
-                <div class="skills__names">
-                    <i class='bx bxl-nodejs skills__icon'></i>
-                    <span class="skills__name">Backend Development</span>
-                </div>
-                <div class="skills__bar skills__backend"></div>
-                <div>
-                    <span class="skills__percentage">75%</span>
-                </div>
-            </div>
-            <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="#" class="work__img" data-src="https://www.example.com/1">
-                        <img src="img/work1.jpg" alt="">
-                        <div class="overlay">Description for Work 1</div>
-                    </a>
-                    <a href="#" class="work__img" data-src="https://www.example.com/2">
-                        <img src="img/work2.jpg" alt="">
-                        <div class="overlay">Description for Work 2</div>
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
-            <!--===== Co-curricular Activities =====-->
-<section class="work section" id="work">
-    <h2 class="section-title">Co-curricular Activities</h2>
-
-    <div class="work__container bd-grid">
-        <div class="work__item">
-            <a href="details.html" class="work__img">
-                <img src="img\technoloy club.jpeg" alt="">
-            </a>
-            <div class="work__description">
-                <h3>Technology Club</h3>
-                <p>Active member of the Technology Club, involved in organizing and participating in various tech events and workshops.</p>
-            </div>
-        </div>
-        <div class="work__item">
-            <a href="details.html" class="work__img">
-                <img src="img/1697442160885.jpeg" alt="">
-            </a>
-            <div class="work__description">
-                <div class = scrollable-text>
-                <h3> National-Level Hackathon hosted by the Oriental Institute of Science & Technology, Bhopal.</h3>
-                <p>#Best_Implementation: Huge congratulations to SURE NICHITH and Team Bandla Kavya , Yuktha Mukhi Nadella , Charan Teja Kondamuri , Srikar Tadakamalla for their exceptional implementation of cutting-edge ideas. They've set a high standard for innovation. A special shoutout to their mentor, Dr. JASWANTH NIDAMANURI, for his guidance and support.</p>
-            </div>
-            </div>
-        </div>
-        <div class="work__item">
-            <a href="#" class="work__img">
-                <img src="img/event2.jpeg" alt="">
-            </a>
-            <div class="work__description">
-                <div class="scrollable-text">
-                <h3>What an Exhilarating Journey at the MARK XXIV Hackathon!</h3>
-                <p>In a world that's constantly evolving, innovation is the key to success, and that's exactly what MARK XXIV is all about. We've gathered some of the brightest minds to brainstorm, ideate, and create groundbreaking solutions to the challenges of today and tomorrow.
-
-                    As an organizer, it's been an incredible journey to put together this event that fosters creativity and collaboration. From the initial concept to the final preparations, the dedication and passion of our team have been truly inspiring.
+                    <p class="home__subtitle">Hello, I'm</p>
+                    <h1 class="home__title">Sure <span class="gradient-text">Nichith</span></h1>
+                    <p class="home__role"><span id="role-text" class="home__role-text">DevOps Engineer</span></p>
+                    <p class="home__description">
+                        Production-grade cloud infrastructure across Azure, GCP &amp; on-prem.
+                        Python-driven automation, GitOps delivery, and AI-powered self-healing systems.
+                        Holder of <strong>3 published patents</strong> &middot; Rated <strong>Top of Team</strong> at Centific.
                     </p>
-            </div>
-            </div>
-        </div>
-        <div class="work__item">
-            <a href="#" class="work__img">
-                <img src="img/event3.jpeg" alt="">
-            </a>
-            <div class="work__description">
-                <div class="scrollable-text">
-                <h3>national Conference conducted by School of Technology, Woxsen University during 23-25th June 2023 and sponsored by DST-SERB and APTSMS: A Grand Finale! </h3>
-                <p>As we bid farewell to an extraordinary three-day international conference, I want to express my deepest gratitude to all the guests( Dr Jyotirmoy Rana, Prof Natesan Srinivasan, Prof. Sachinkumar B Bhalekar, Prof. Y N Reddy, Prof. J.V. Ramana Murthy) who made Day 3 a grand finale filled with remarkable insights and memorable moments!
-                    A special shout-out to our dedicated student volunteers ( Kuragayala Kenny Joel, Bharath Reddy, Kalakoti Varun Teja, Aditi Baggu, Bandla Kavya, SURE NICHITH, Suchitra Sekhar, Yuktha Mukhi Nadella, Jeereddy Mani Chenna Kesava Reddy )who worked tirelessly until the very end. Your commitment, resilience, and professionalism throughout the conference have been remarkable. From managing logistics to ensuring the smooth flow of events, your contributions have been invaluable. 
-                </p>
-            </div>
-            </div>
-        </div>
-        <div class="work__item">
-            <a href="#" class="work__img">
-                <img src="img/event4.jpeg" alt="">
-            </a>
-            <div class="work__description">
-                <div class="scrollable-text">
-                <h3>Empowering Young Minds for a Healthier Future</h3>
-                <p>ERS activity at the School of Technology, where we had the privilege of hosting 3rd-year DSAI, B.Tech students from School of Technology Woxsen University, Hyderabad. The session focused on the crucial relationship between nutrition, mental health, and combating obesity..</p>
-            </div>
-            </div>
-        </div>
-        <div class="work__item">
-            <a href="#" class="work__img">
-                <img src="img/event5.jpeg" alt="">
-            </a>
-            <div class="work__description">
-                <div class="scrollable-text">
-                <h3>Empowering Nearby Villages and Schools through Cyber Suraksha Event
-                </h3>
-                <p>The resource persons from CSI Computer Society Of India, Ms. Rama S. Patnaik and Wing commander Srinivasu G conducted the sessions focusing on Common Cyber Threats, Protecting Personal Information, 
-                    Password Management, Identifying Cyber Scams, 
-                    Social Media Security, and reporting Cyber Incidents.
-                    .</p>
+                    <div class="home__buttons">
+                        <a href="#projects" class="btn btn--primary">View Projects</a>
+                        <a href="#contact"  class="btn btn--ghost">Get In Touch</a>
+                    </div>
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/sure-nichith-b492bb24a/" target="_blank" rel="noopener" class="home__social-link" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                        <a href="https://github.com/Jstnichu" target="_blank" rel="noopener" class="home__social-link" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                        <a href="mailto:surenichith1234567@gmail.com" class="home__social-link" aria-label="Email"><i class="bx bx-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="home__visual">
+                    <div class="home__img-ring"></div>
+                    <div class="home__img-wrap">
+                        <img src="img/img.png" alt="Sure Nichith" class="home__img">
+                    </div>
+                    <div class="home__stat home__stat--1">
+                        <span class="home__stat-num">3</span>
+                        <span class="home__stat-label">Patents</span>
+                    </div>
+                    <div class="home__stat home__stat--2">
+                        <span class="home__stat-num">10+</span>
+                        <span class="home__stat-label">Research Projects</span>
+                    </div>
+                    <div class="home__stat home__stat--3">
+                        <span class="home__stat-num">3+</span>
+                        <span class="home__stat-label">Cloud Platforms</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Technology Club</h3>
-            <p>Active member of the Technology Club, involved in organizing and participating in various tech events and workshops.</p>
-        </div>
-    </div>
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>MARK 24 Hackathon</h3>
-            <p>Participated in the MARK 24 Hackathon, contributing to innovative projects and collaborative problem-solving.</p>
-        </div>
-    </div>
-</section>
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-btn" aria-label="Scroll to About section">
+                    <i class="bx bx-chevrons-down"></i>
+                </a>
+            </div>
+        </section>
 
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Submit" class="contact__button button">
+        <!-- ===== ABOUT ===== -->
+        <section class="about section" id="about">
+            <div class="container">
+                <p class="section__tag">Who I am</p>
+                <h2 class="section__title">About <span class="gradient-text">Me</span></h2>
+
+                <div class="about__container">
+                    <div class="about__img-wrap">
+                        <img src="img/img2.jpg" alt="Sure Nichith" class="about__img">
+                    </div>
+
+                    <div class="about__data">
+                        <h3 class="about__subtitle">DevOps / AIOps / DevSecOps Engineer</h3>
+                        <p class="about__text">
+                            B.Tech graduate in AI &amp; Data Science delivering production-grade cloud infrastructure
+                            across Azure, GCP, and on-premises environments. Expert in Python-driven automation —
+                            from pipeline-free deployments to multi-cloud server provisioning and self-healing systems.
+                        </p>
+                        <p class="about__text">
+                            Practitioner of shift-left security (Trivy, SonarQube), GitOps delivery (ArgoCD), and
+                            scalable Kubernetes orchestration. Experienced in LLM/SLM deployment, RAG systems,
+                            and agentic AI automation. Recognised with a Rising Star nomination
+                            at Centific and holder of <strong>3 published Indian patents</strong>.
+                        </p>
+
+                        <div class="about__info">
+                            <div class="about__info-item">
+                                <i class="bx bx-map"></i>
+                                <span>Hyderabad, India</span>
+                            </div>
+                            <div class="about__info-item">
+                                <i class="bx bx-briefcase"></i>
+                                <span>DevOps / AIOps Engineer &middot; Centific</span>
+                            </div>
+                            <div class="about__info-item">
+                                <i class="bx bx-graduation"></i>
+                                <span>B.Tech AI &amp; Data Science &middot; Woxsen University</span>
+                            </div>
+                            <div class="about__info-item">
+                                <i class="bx bx-envelope"></i>
+                                <span>surenichith1234567@gmail.com</span>
+                            </div>
+                            <div class="about__info-item">
+                                <i class="bx bx-phone"></i>
+                                <span>+91 9392487689</span>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="btn btn--primary">Let's Talk</a>
+                    </div>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills__section">
+                    <h3 class="skills__section-title">Technical Skills</h3>
+                    <div class="skills__categories">
+                        <div class="skill__category">
+                            <div class="skill__category-header">
+                                <i class="bx bx-cloud skill__category-icon"></i>
+                                <span>Cloud &amp; Infrastructure</span>
+                            </div>
+                            <div class="skill__tags">
+                                <span class="skill__tag">Azure AKS</span><span class="skill__tag">Azure ACR</span>
+                                <span class="skill__tag">App Services</span><span class="skill__tag">Azure Monitor</span>
+                                <span class="skill__tag">GCP GKE</span><span class="skill__tag">Cloud Run</span>
+                                <span class="skill__tag">AWS EC2/S3</span><span class="skill__tag">On-Premises</span>
+                            </div>
+                        </div>
+                        <div class="skill__category">
+                            <div class="skill__category-header">
+                                <i class="bx bxl-docker skill__category-icon"></i>
+                                <span>Containers &amp; Orchestration</span>
+                            </div>
+                            <div class="skill__tags">
+                                <span class="skill__tag">Docker</span><span class="skill__tag">Docker Compose</span>
+                                <span class="skill__tag">Kubernetes</span><span class="skill__tag">Helm</span>
+                                <span class="skill__tag">HPA</span><span class="skill__tag">RBAC</span>
+                                <span class="skill__tag">Ingress</span><span class="skill__tag">ArgoCD</span>
+                                <span class="skill__tag">GitOps</span>
+                            </div>
+                        </div>
+                        <div class="skill__category">
+                            <div class="skill__category-header">
+                                <i class="bx bx-code-alt skill__category-icon"></i>
+                                <span>CI/CD &amp; IaC</span>
+                            </div>
+                            <div class="skill__tags">
+                                <span class="skill__tag">GitHub Actions</span><span class="skill__tag">Azure DevOps</span>
+                                <span class="skill__tag">Jenkins</span><span class="skill__tag">Terraform</span>
+                                <span class="skill__tag">Ansible</span><span class="skill__tag">Azure Bicep</span>
+                                <span class="skill__tag">Bash/Shell</span>
+                            </div>
+                        </div>
+                        <div class="skill__category">
+                            <div class="skill__category-header">
+                                <i class="bx bx-shield-alt-2 skill__category-icon"></i>
+                                <span>DevSecOps</span>
+                            </div>
+                            <div class="skill__tags">
+                                <span class="skill__tag">Trivy</span><span class="skill__tag">SonarQube</span>
+                                <span class="skill__tag">Azure Key Vault</span><span class="skill__tag">OWASP</span>
+                                <span class="skill__tag">Compliance-as-Code</span><span class="skill__tag">RBAC Hardening</span>
+                                <span class="skill__tag">Network Policies</span>
+                            </div>
+                        </div>
+                        <div class="skill__category">
+                            <div class="skill__category-header">
+                                <i class="bx bx-line-chart skill__category-icon"></i>
+                                <span>AIOps &amp; Observability</span>
+                            </div>
+                            <div class="skill__tags">
+                                <span class="skill__tag">Prometheus</span><span class="skill__tag">Grafana</span>
+                                <span class="skill__tag">OpenTelemetry</span><span class="skill__tag">ELK Stack</span>
+                                <span class="skill__tag">Azure Monitor</span><span class="skill__tag">Self-Healing</span>
+                                <span class="skill__tag">Anomaly Detection</span>
+                            </div>
+                        </div>
+                        <div class="skill__category">
+                            <div class="skill__category-header">
+                                <i class="bx bx-brain skill__category-icon"></i>
+                                <span>AI/ML &amp; LLMOps</span>
+                            </div>
+                            <div class="skill__tags">
+                                <span class="skill__tag">FastAPI</span><span class="skill__tag">LangChain</span>
+                                <span class="skill__tag">Hugging Face</span><span class="skill__tag">RAG Pipelines</span>
+                                <span class="skill__tag">MLflow</span><span class="skill__tag">GPU Optimisation</span>
+                                <span class="skill__tag">LLM/SLM Deployment</span>
+                            </div>
+                        </div>
+                        <div class="skill__category">
+                            <div class="skill__category-header">
+                                <i class="bx bxl-python skill__category-icon"></i>
+                                <span>Languages &amp; Databases</span>
+                            </div>
+                            <div class="skill__tags">
+                                <span class="skill__tag">Python (Advanced)</span><span class="skill__tag">Bash</span>
+                                <span class="skill__tag">YAML</span><span class="skill__tag">SQL</span>
+                                <span class="skill__tag">JavaScript</span><span class="skill__tag">PostgreSQL</span>
+                                <span class="skill__tag">MongoDB</span><span class="skill__tag">Redis</span>
+                                <span class="skill__tag">ChromaDB</span><span class="skill__tag">FAISS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section class="experience section" id="experience">
+            <div class="container">
+                <p class="section__tag">Where I've worked</p>
+                <h2 class="section__title">Work <span class="gradient-text">Experience</span></h2>
+
+                <div class="exp__timeline">
+
+                    <div class="exp__item">
+                        <div class="exp__dot"></div>
+                        <div class="exp__card">
+                            <div class="exp__card-header">
+                                <div>
+                                    <h3 class="exp__role">DevOps / AIOps / DevSecOps Engineer</h3>
+                                    <p class="exp__company"><i class="bx bx-buildings"></i> Centific &middot; Hyderabad, India</p>
+                                </div>
+                                <div class="exp__meta">
+                                    <span class="exp__badge exp__badge--current">Full-Time</span>
+                                    <span class="exp__period">2024 – Present</span>
+                                </div>
+                            </div>
+                            <div class="exp__groups">
+                                <div class="exp__group">
+                                    <p class="exp__group-label">AIOps &amp; Intelligent Automation</p>
+                                    <ul class="exp__bullets">
+                                        <li>Architected Python pipeline-free deployment engine orchestrating full app lifecycle (build &rarr; test &rarr; deploy &rarr; verify) across Azure, GCP, and on-prem — reducing release complexity by 50%.</li>
+                                        <li>Built self-healing monitoring: Python + Prometheus detects Kubernetes pod anomalies, triggers auto-restart or rollback — reducing MTTR by 35% and eliminating overnight manual intervention.</li>
+                                        <li>Deployed AI-driven log analysis pipeline (ELK + Python ML hooks) across 10+ microservices for predictive alerting before user impact.</li>
+                                    </ul>
+                                </div>
+                                <div class="exp__group">
+                                    <p class="exp__group-label">DevSecOps &amp; Platform Security</p>
+                                    <ul class="exp__bullets">
+                                        <li>Automated Trivy scanning — 100% Docker image and Kubernetes manifest coverage, enforcing zero-critical-CVE policy across all production services.</li>
+                                        <li>Integrated SonarQube quality gates; reduced code vulnerabilities by 40% across Python microservices and API codebases.</li>
+                                        <li>Implemented shift-left security: Azure Key Vault, RBAC hardening, network policy enforcement, and compliance-as-code baked into every deployment.</li>
+                                    </ul>
+                                </div>
+                                <div class="exp__group">
+                                    <p class="exp__group-label">Cloud Infrastructure &amp; GitOps</p>
+                                    <ul class="exp__bullets">
+                                        <li>Maintained Kubernetes microservices on Azure AKS with ArgoCD GitOps — 99.9% uptime with automated drift detection and zero-downtime rollouts.</li>
+                                        <li>Built CI/CD pipelines (GitHub Actions + Azure DevOps) cutting deployment cycle by ~40%; containerised 10+ FastAPI services with multi-environment Helm charts.</li>
+                                        <li>Deployed LLM/SLM applications (RAG chatbot APIs, Hugging Face + LangChain) on Azure AKS with full-stack observability via Prometheus + Grafana + OpenTelemetry.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="exp__tech">
+                                <span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">Kubernetes</span>
+                                <span class="tag">ArgoCD</span><span class="tag">Terraform</span><span class="tag">Python</span>
+                                <span class="tag">Trivy</span><span class="tag">SonarQube</span><span class="tag">Prometheus</span><span class="tag">LangChain</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp__item">
+                        <div class="exp__dot"></div>
+                        <div class="exp__card">
+                            <div class="exp__card-header">
+                                <div>
+                                    <h3 class="exp__role">Research Assistant — AI &amp; Driver Safety</h3>
+                                    <p class="exp__company"><i class="bx bx-buildings"></i> iHub Data &middot; IIIT Hyderabad (Mobility Fellowship)</p>
+                                </div>
+                                <div class="exp__meta">
+                                    <span class="exp__badge">Fellowship</span>
+                                    <span class="exp__period">Feb 2024 – Jul 2024</span>
+                                </div>
+                            </div>
+                            <ul class="exp__bullets">
+                                <li>Contributed to <em>Beyond Safety</em> research on in-vehicle driver distraction monitoring and attention quantification using computer vision and embedded AI.</li>
+                                <li>Research directly resulted in a published Indian patent — App. No. 202441077305 A.</li>
+                            </ul>
+                            <div class="exp__tech">
+                                <span class="tag">Python</span><span class="tag">Computer Vision</span>
+                                <span class="tag">TensorFlow</span><span class="tag">Embedded AI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp__item">
+                        <div class="exp__dot"></div>
+                        <div class="exp__card">
+                            <div class="exp__card-header">
+                                <div>
+                                    <h3 class="exp__role">IoT &amp; Software Development Intern</h3>
+                                    <p class="exp__company"><i class="bx bx-buildings"></i> NGE Industries &middot; Mallapur, Hyderabad</p>
+                                </div>
+                                <div class="exp__meta">
+                                    <span class="exp__badge">Internship</span>
+                                    <span class="exp__period">Jul 2023 – Jun 2024</span>
+                                </div>
+                            </div>
+                            <ul class="exp__bullets">
+                                <li>Built end-to-end IoT smart garden system: Flutter mobile app + Flask REST API backend + Streamlit real-time dashboard, integrating multi-sensor data for automated irrigation and remote control.</li>
+                            </ul>
+                            <div class="exp__tech">
+                                <span class="tag">Flutter</span><span class="tag">Flask</span>
+                                <span class="tag">Streamlit</span><span class="tag">IoT</span><span class="tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <p class="section__tag">What I've built</p>
+                <h2 class="section__title">Key <span class="gradient-text">Projects</span></h2>
+
+                <div class="projects__grid">
+
+                    <div class="project__card">
+                        <div class="project__card-img-wrap">
+                            <img src="img/work1.jpg" alt="Pipeline-Free AIOps Deployment Engine" class="project__card-img">
+                            <div class="project__card-overlay">
+                                <a href="#" class="project__card-link" aria-label="View project"><i class="bx bx-link-external"></i></a>
+                            </div>
+                        </div>
+                        <div class="project__card-body">
+                            <span class="project__card-tag">AIOps &middot; Automation</span>
+                            <h3 class="project__card-title">Pipeline-Free AIOps Deployment Engine</h3>
+                            <p class="project__card-desc">Python orchestration engine automating full app lifecycle (build &rarr; test &rarr; deploy &rarr; verify) across Azure, GCP, and on-prem without CI/CD dependency. Enables on-demand rollbacks and canary deployments via direct API orchestration.</p>
+                            <div class="project__card-tech">
+                                <span class="tag">Python</span><span class="tag">Azure SDK</span>
+                                <span class="tag">GCP SDK</span><span class="tag">Kubernetes API</span><span class="tag">Ansible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project__card">
+                        <div class="project__card-img-wrap">
+                            <img src="img/work2.jpg" alt="DevSecOps Security Automation Framework" class="project__card-img">
+                            <div class="project__card-overlay">
+                                <a href="#" class="project__card-link" aria-label="View project"><i class="bx bx-link-external"></i></a>
+                            </div>
+                        </div>
+                        <div class="project__card-body">
+                            <span class="project__card-tag">DevSecOps &middot; Security</span>
+                            <h3 class="project__card-title">DevSecOps Security Automation Framework</h3>
+                            <p class="project__card-desc">Automated shift-left pipeline: Trivy scanning &rarr; SonarQube analysis &rarr; Key Vault validation &rarr; policy enforcement before every deploy. Achieved zero critical CVEs in production for 6+ consecutive months.</p>
+                            <div class="project__card-tech">
+                                <span class="tag">Trivy</span><span class="tag">SonarQube</span>
+                                <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Azure Key Vault</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project__card">
+                        <div class="project__card-img-wrap">
+                            <img src="img/work3.jpg" alt="LLM-Powered RAG Chatbot Platform" class="project__card-img">
+                            <div class="project__card-overlay">
+                                <a href="#" class="project__card-link" aria-label="View project"><i class="bx bx-link-external"></i></a>
+                            </div>
+                        </div>
+                        <div class="project__card-body">
+                            <span class="project__card-tag">LLMOps &middot; AI</span>
+                            <h3 class="project__card-title">LLM-Powered RAG Chatbot Platform</h3>
+                            <p class="project__card-desc">Production RAG chatbot on Azure AKS with auto-scaling. Integrated Hugging Face LLMs with ChromaDB for enterprise document Q&amp;A — handles concurrent queries at sub-2s response latency.</p>
+                            <div class="project__card-tech">
+                                <span class="tag">FastAPI</span><span class="tag">LangChain</span>
+                                <span class="tag">Hugging Face</span><span class="tag">ChromaDB</span><span class="tag">Azure AKS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project__card project__card--featured">
+                        <div class="project__card-img-wrap">
+                            <img src="img/work4.jpg" alt="Beyond Safety" class="project__card-img">
+                            <div class="project__card-overlay">
+                                <a href="#" class="project__card-link" aria-label="View project"><i class="bx bx-link-external"></i></a>
+                            </div>
+                        </div>
+                        <div class="project__card-body">
+                            <span class="project__card-tag">Computer Vision &middot; Embedded AI</span>
+                            <h3 class="project__card-title">Beyond Safety — Driver Distraction Monitoring</h3>
+                            <p class="project__card-desc">AI-powered driver monitoring with real-time attention quantification and medical emergency fusion on embedded hardware. Research at IIIT Hyderabad — led directly to <strong>3 published Indian patents</strong>.</p>
+                            <div class="project__card-tech">
+                                <span class="tag">Python</span><span class="tag">Computer Vision</span>
+                                <span class="tag">TensorFlow</span><span class="tag">Embedded AI</span>
+                            </div>
+                            <div class="project__patent-badge">
+                                <i class="bx bx-certification"></i> 3 Published Patents
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== RECOGNITION ===== -->
+        <section class="recognition section" id="recognition">
+            <div class="container">
+                <p class="section__tag">Achievements</p>
+                <h2 class="section__title">Recognition &amp; <span class="gradient-text">Patents</span></h2>
+
+                <h3 class="recognition__sub-title">
+                    <i class="bx bx-certification"></i> Published Patents
+                </h3>
+                <div class="patents__grid">
+                    <div class="patent__card">
+                        <div class="patent__published">PUBLISHED</div>
+                        <div class="patent__icon"><i class="bx bx-car"></i></div>
+                        <h4 class="patent__title">In-Vehicle Driver Distraction Monitoring System</h4>
+                        <p class="patent__number">App. No. 202441077305 A</p>
+                        <p class="patent__date"><i class="bx bx-calendar"></i> Filed: Oct 25, 2024</p>
+                        <p class="patent__desc">Real-time driver attention quantification using computer vision and embedded AI for in-vehicle safety systems.</p>
+                    </div>
+                    <div class="patent__card">
+                        <div class="patent__published">PUBLISHED</div>
+                        <div class="patent__icon"><i class="bx bx-shield-quarter"></i></div>
+                        <h4 class="patent__title">Accident Prevention System for Four-Wheeler Vehicles</h4>
+                        <p class="patent__number">App. No. 202441063588</p>
+                        <p class="patent__date"><i class="bx bx-calendar"></i> Filed: Oct 22, 2024</p>
+                        <p class="patent__desc">AI-driven accident prevention with medical emergency fusion for four-wheel vehicles.</p>
+                    </div>
+                    <div class="patent__card">
+                        <div class="patent__published">PUBLISHED</div>
+                        <div class="patent__icon"><i class="bx bx-bus"></i></div>
+                        <h4 class="patent__title">Real-Time Seat Availability Monitoring — Public Transport</h4>
+                        <p class="patent__number">App. No. 202441031254</p>
+                        <p class="patent__date"><i class="bx bx-calendar"></i> Filed: Apr 26, 2024</p>
+                        <p class="patent__desc">IoT-based real-time seat occupancy monitoring system for public transportation networks.</p>
+                    </div>
+                </div>
+
+                <h3 class="recognition__sub-title">
+                    <i class="bx bx-trophy"></i> Leadership
+                </h3>
+                <div class="awards__grid">
+                    <div class="award__card">
+                        <div class="award__icon award__icon--gold"><i class="bx bx-star"></i></div>
+                        <div class="award__body">
+                            <h4 class="award__title">Highest Rated — Annual Performance Review</h4>
+                            <p class="award__org">Centific</p>
+                            <p class="award__desc">Recognised as the highest-rated engineer in the team for exceptional DevOps/AIOps delivery and sustained production impact.</p>
+                        </div>
+                    </div>
+                    <div class="award__card">
+                        <div class="award__icon award__icon--purple"><i class="bx bxs-rocket"></i></div>
+                        <div class="award__body">
+                            <h4 class="award__title">Rising Star Award — Nominated</h4>
+                            <p class="award__org">Centific</p>
+                            <p class="award__desc">Outstanding initiative and production impact recognised as an early-career engineer.</p>
+                        </div>
+                    </div>
+                    <div class="award__card">
+                        <div class="award__icon award__icon--cyan"><i class="bx bx-trophy"></i></div>
+                        <div class="award__body">
+                            <h4 class="award__title">Best Implementation Award</h4>
+                            <p class="award__org">OSIT Hackathon 2023</p>
+                            <p class="award__desc">Top prize for innovative technical solution at a national-level hackathon, Bhopal.</p>
+                        </div>
+                    </div>
+                    <div class="award__card">
+                        <div class="award__icon award__icon--blue"><i class="bx bx-group"></i></div>
+                        <div class="award__body">
+                            <h4 class="award__title">Executive Member &amp; Placements Cell</h4>
+                            <p class="award__org">Woxsen University</p>
+                            <p class="award__desc">Placements Cell Representative driving student career outcomes and industry engagement.</p>
+                        </div>
+                    </div>
+                    <div class="award__card award__card--sprint">
+                        <div class="award__icon award__icon--cyan"><i class="bx bx-brain"></i></div>
+                        <div class="award__body">
+                            <h4 class="award__title">Technical Mentor &amp; Agentic OPS Team</h4>
+                            <p class="award__org">Centific Premier Hackathon 2.0 &middot; HITEC City, Hyderabad</p>
+                            <p class="award__desc">
+                                Officially selected as <strong>Technical Mentor</strong> and core member of the
+                                <strong>Agentic OPS Team</strong> for Centific's Premier Hackathon 2.0 —
+                                a two-week residential AI innovation sprint (Apr 20 – May 3) alongside
+                                world-class engineers, researchers, and product leaders.
+                            </p>
+                            <span class="award__sprint-badge">Apr 20 – May 3 · Centific Premier Hackathon 2.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="recognition__sub-title">
+                    <i class="bx bx-badge-check"></i> Certifications &amp; Education
+                </h3>
+                <div class="certs__grid">
+                    <div class="cert__card">
+                        <div class="cert__logo cert__logo--aws"><i class="fab fa-aws"></i></div>
+                        <div class="cert__body">
+                            <h4 class="cert__title">AWS Cloud Practitioner</h4>
+                            <p class="cert__issuer">Amazon Web Services</p>
+                            <p class="cert__date">Aug 2023</p>
+                        </div>
+                    </div>
+                    <div class="cert__card">
+                        <div class="cert__logo cert__logo--dl"><i class="bx bx-brain"></i></div>
+                        <div class="cert__body">
+                            <h4 class="cert__title">AI for Everyone</h4>
+                            <p class="cert__issuer">DeepLearning.AI / Coursera</p>
+                            <p class="cert__date">Jul 2023</p>
+                        </div>
+                    </div>
+                    <div class="cert__card">
+                        <div class="cert__logo cert__logo--edu"><i class="bx bx-graduation"></i></div>
+                        <div class="cert__body">
+                            <h4 class="cert__title">B.Tech — AI &amp; Data Science</h4>
+                            <p class="cert__issuer">Woxsen University · Hyderabad</p>
+                            <p class="cert__date">2022 – 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert__card">
+                        <div class="cert__logo cert__logo--edu"><i class="bx bx-book"></i></div>
+                        <div class="cert__body">
+                            <h4 class="cert__title">Diploma — Electrical &amp; Electronic Engineering</h4>
+                            <p class="cert__issuer">Mother Teresa Institute &middot; Khammam</p>
+                            <p class="cert__date">2019 – 2022</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== CO-CURRICULAR ACTIVITIES ===== -->
+        <section class="activities section" id="activities">
+            <div class="container">
+                <p class="section__tag">Beyond the code</p>
+                <h2 class="section__title">Leadership &amp; <span class="gradient-text">Activities</span></h2>
+
+                <div class="activities__grid">
+
+                    <div class="activity__card activity__card--featured">
+                        <div class="activity__img-wrap">
+                            <img src="img/centific-hackathon2.jpg" alt="Centific Premier Hackathon 2.0 — Mentor">
+                        </div>
+                        <div class="activity__body">
+                            <span class="activity__tag activity__tag--mentor">Mentor · Centific</span>
+                            <h3 class="activity__title">Centific Premier Hackathon 2.0 — Technical Mentor</h3>
+                            <p class="activity__desc">
+                                Officially recognised as a <strong>Technical Mentor</strong> at Centific's Premier Hackathon 2.0,
+                                HITEC City, Hyderabad. Guided teams on agentic AI systems, cloud infrastructure automation,
+                                and DevOps best practices — part of the two-week residential AI innovation sprint alongside
+                                world-class engineers, researchers, and product leaders.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="activity__card">
+                        <div class="activity__img-wrap">
+                            <img src="img/technoloy club.jpeg" alt="Technology Club">
+                        </div>
+                        <div class="activity__body">
+                            <span class="activity__tag">Club</span>
+                            <h3 class="activity__title">Technology Club</h3>
+                            <p class="activity__desc">Active member involved in organising and participating in tech events, workshops, and innovation drives at Woxsen University.</p>
+                        </div>
+                    </div>
+
+                    <div class="activity__card">
+                        <div class="activity__img-wrap">
+                            <img src="img/1697442160885.jpeg" alt="OSIT Hackathon Bhopal">
+                        </div>
+                        <div class="activity__body">
+                            <span class="activity__tag">Hackathon — Winner</span>
+                            <h3 class="activity__title">National-Level Hackathon — OSIT, Bhopal</h3>
+                            <p class="activity__desc">
+                                <strong>🏆 Best Implementation Award</strong> — Oriental Institute of Science &amp; Technology, Bhopal (Oct 2023).
+                                Recognised for exceptional implementation of cutting-edge ideas alongside teammates Bandla Kavya, Yuktha Mukhi Nadella, Charan Teja Kondamuri &amp; Srikar Tadakamalla, mentored by Dr. Jaswanth Nidamanuri.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="activity__card">
+                        <div class="activity__img-wrap">
+                            <img src="img/event2.jpeg" alt="MARK XXIV Hackathon">
+                        </div>
+                        <div class="activity__body">
+                            <span class="activity__tag">Organiser</span>
+                            <h3 class="activity__title">MARK XXIV Hackathon — Event Organisation</h3>
+                            <p class="activity__desc">Event Organisation Committee Member for MARK 24 Hackathon at Woxsen University. Brought together the brightest minds to ideate and build groundbreaking solutions, fostering creativity and cross-team collaboration.</p>
+                        </div>
+                    </div>
+
+                    <div class="activity__card">
+                        <div class="activity__img-wrap">
+                            <img src="img/event3.jpeg" alt="National Conference Woxsen">
+                        </div>
+                        <div class="activity__body">
+                            <span class="activity__tag">Conference Volunteer</span>
+                            <h3 class="activity__title">National Conference — Woxsen University</h3>
+                            <p class="activity__desc">3-day international conference sponsored by DST-SERB &amp; APTSMS (Jun 2023). Managed logistics and ensured smooth event operations for distinguished guest faculty from premier institutions across India.</p>
+                        </div>
+                    </div>
+
+                    <div class="activity__card">
+                        <div class="activity__img-wrap">
+                            <img src="img/event4.jpeg" alt="ERS Health Initiative">
+                        </div>
+                        <div class="activity__body">
+                            <span class="activity__tag">Outreach</span>
+                            <h3 class="activity__title">Empowering Young Minds — Health Initiative</h3>
+                            <p class="activity__desc">ERS activity at School of Technology hosting B.Tech DSAI students. Session covered nutrition, mental health, and combating obesity — bridging academic knowledge with real-world wellness outcomes.</p>
+                        </div>
+                    </div>
+
+                    <div class="activity__card">
+                        <div class="activity__img-wrap">
+                            <img src="img/event5.jpeg" alt="Cyber Suraksha">
+                        </div>
+                        <div class="activity__body">
+                            <span class="activity__tag">Cyber Safety</span>
+                            <h3 class="activity__title">Cyber Suraksha — Village &amp; School Outreach</h3>
+                            <p class="activity__desc">Community cyber-safety programme by CSI India covering threats, password management, social media security &amp; scam identification. Hands-on sessions delivered to nearby villages and schools in collaboration with resource persons Ms. Rama S. Patnaik and Wing Commander Srinivasu G.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <p class="section__tag">Get in touch</p>
+                <h2 class="section__title">Contact <span class="gradient-text">Me</span></h2>
+
+                <div class="contact__container">
+                    <div class="contact__info">
+                        <h3 class="contact__info-title">Let's work together</h3>
+                        <p class="contact__info-text">
+                            Open to DevOps / AIOps / DevSecOps roles, cloud infrastructure consulting,
+                            AI automation projects, and research collaborations.
+                        </p>
+
+                        <div class="contact__details">
+                            <div class="contact__detail">
+                                <div class="contact__detail-icon"><i class="bx bx-envelope"></i></div>
+                                <div>
+                                    <p class="contact__detail-label">Email</p>
+                                    <p class="contact__detail-value">surenichith1234567@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact__detail">
+                                <div class="contact__detail-icon"><i class="bx bx-phone"></i></div>
+                                <div>
+                                    <p class="contact__detail-label">Phone</p>
+                                    <p class="contact__detail-value">+91 9392487689</p>
+                                </div>
+                            </div>
+                            <div class="contact__detail">
+                                <div class="contact__detail-icon"><i class="bx bx-map"></i></div>
+                                <div>
+                                    <p class="contact__detail-label">Location</p>
+                                    <p class="contact__detail-value">Hyderabad, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__socials">
+                            <a href="https://www.linkedin.com/in/sure-nichith-b492bb24a/" target="_blank" rel="noopener" class="contact__social-link" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                            <a href="https://github.com/Jstnichu" target="_blank" rel="noopener" class="contact__social-link" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                            <a href="mailto:surenichith1234567@gmail.com" class="contact__social-link" aria-label="Email"><i class="bx bx-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <form class="contact__form" id="contact-form">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder=" " id="form-name" required>
+                            <label class="form__label" for="form-name">Your Name</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" class="form__input" placeholder=" " id="form-email" required>
+                            <label class="form__label" for="form-email">Email Address</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder=" " id="form-subject">
+                            <label class="form__label" for="form-subject">Subject</label>
+                        </div>
+                        <div class="form__group">
+                            <textarea class="form__input form__textarea" placeholder=" " id="form-message" rows="5" required></textarea>
+                            <label class="form__label" for="form-message">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Send Message <i class="bx bx-send"></i>
+                        </button>
+                        <p class="form__success" id="form-success">Message sent! I'll get back to you soon.</p>
                     </form>
                 </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Sure Nichith</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            <p class="footer__copy">&#169; sure-nichith-b492bb24a. All rigths reserved</p>
-        </footer>
+        </section>
 
+    </main>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a href="#home" class="footer__logo">
+                    <span class="nav__logo-dot"></span>Sure Nichith
+                </a>
+                <div class="footer__social">
+                    <a href="https://www.linkedin.com/in/sure-nichith-b492bb24a/" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/Jstnichu" target="_blank" rel="noopener" class="footer__social-link" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                    <a href="mailto:surenichith1234567@gmail.com" class="footer__social-link" aria-label="Email"><i class="bx bx-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">© 2025 Sure Nichith. All rights reserved.</p>
+                <p class="footer__copy">DevOps &middot; AIOps &middot; DevSecOps &middot; Hyderabad, India</p>
+            </div>
+        </div>
+    </footer>
 
-        <!--===== MAIN JS =====-->
-        <script src="script2.js"></script>
-    </body>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script2.js"></script>
+</body>
 </html>
